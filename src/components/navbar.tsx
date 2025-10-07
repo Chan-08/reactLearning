@@ -1,7 +1,5 @@
-function navbar() {
-  return <div>
-        <header>
-            <nav className="navbar bg-dark navbar-dark navbar-expand-lg sticky-top">
+export default function navbar() {
+    return <nav className="navbar bg-dark navbar-dark navbar-expand-lg sticky-top">
                 <div className="container-fluid">
                     <a className="navbar-brand text-white" href="#">Navbar</a>
 
@@ -16,8 +14,4 @@ function navbar() {
                     </div>
                 </div>
             </nav>
-        </header>
-  </div>;
 }
-
-export default navbar
