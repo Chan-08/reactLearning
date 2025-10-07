@@ -3,6 +3,7 @@ import Bootstrap from './components/bootstrap'
 import ProbsExample from './components/probs'
 import Navbar from './components/navbar'
 import State from './components/state'
+import Onchange from './components/onchange'
 
 function App() {
   return <div>
@@ -11,6 +12,7 @@ function App() {
             <Bootstrap/>
             <ProbsExample name="Chandrakumar" age={21}/>
             <State/>
+            <Onchange/>
         </div>
 }
 
