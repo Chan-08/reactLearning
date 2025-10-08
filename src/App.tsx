@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import Navbar from './components/navbar'
 import Footer from './components/footer'
+import SideBar from './components/sidemenu';
 
 import Welcome from './components02/welcome'
 import Bootstrap from './components02/bootstrap'
@@ -19,31 +20,33 @@ import Products from './pages/products'
 
 export default function App() {
   return (
-    <div>
+    <div className="app-container">
       <Navbar />
-      <main>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Welcome />
-                <Bootstrap />
-                <ProbsExample name="Chandrakumar" age={21} />
-                <State />
-                <Onchange />
-                <List />
-                <TaskManager />
-              </>
-            }
-          />
-
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-      <Footer/>
+        <div className="content-wrapper">
+          <SideBar />
+          <main>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Welcome />
+                    <Bootstrap />
+                    <ProbsExample name="Chandrakumar" age={21} />
+                    <State />
+                    <Onchange />
+                    <List />
+                    <TaskManager />
+                  </>
+                }
+              />
+              <Route path="/about" element={<About />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+        </div>
+      <Footer />
     </div>
   )
 }
