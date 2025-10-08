@@ -3,7 +3,7 @@ import '../App.css';
 
 export default function SideBar() {
     return (
-        <aside className="SideBar bg-dark">
+        <aside className="SideBar bg-danger">
             <h2 className="text-white">Side Bar</h2>
             <nav>
                 <ul className="list-unstyled">

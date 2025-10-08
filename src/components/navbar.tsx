@@ -6,7 +6,9 @@ export default function Navbar() {
           <div className="container-fluid">
               <a className="navbar-brand text-white" href="/">Navbar</a>
 
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span className="navbar-toggler-icon"></span></button>
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                  <span className="navbar-toggler-icon"></span>
+              </button>
 
               <div className="collapse navbar-collapse" id="navbarNav">
                   <ul className="navbar-nav ms-auto">
