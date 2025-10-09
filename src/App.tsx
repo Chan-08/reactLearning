@@ -16,6 +16,7 @@ import TaskManager from './components02/taskmanager'
 import About from './pages/about'
 import Contact from './pages/contact'
 import Products from './pages/products'
+import Products2 from './pages/products2';
 
 
 export default function App() {
@@ -32,16 +33,27 @@ export default function App() {
                   <>
                     <Welcome />
                     <Bootstrap />
-                    <ProbsExample name="Chandrakumar" age={21} />
+
+                    <h1 className='mt-5'>Probs section</h1>
+                    <ProbsExample name="Chandrakumar" age={21} show={true} />
+                    <ProbsExample name="Name 2" age={23}/>
+                    <ProbsExample show={true}/>
+                    <p>there are three example but true is opted only for two</p>
+
+                    <h1 className='mt-5'>Use State Section</h1>
                     <State />
+
                     <Onchange />
+
                     <List />
+
                     <TaskManager />
                   </>
                 }
               />
               <Route path="/about" element={<About />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/products-dynamic" element={<Products2 /> }/>
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>

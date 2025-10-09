@@ -1,12 +1,27 @@
-type varProps = {
-  name: string;
-  age: number;
+type Props = {
+  name?: string;
+  age?: number;
+  show?: boolean;
 };
 
-export default function probsExample({name , age}: varProps) {
-  //console.log("Welcome to the application!");
-  return <div>
-    <h1 className="">Welcome {name} {age}</h1>
-    <p>This is a simple React application. probs implemented</p>
-  </div>;
+export default function ProbsExample({ name, age, show }: Props) {
+  return (<>
+    {show ? (
+      <div>
+        <h1>Welcome {name} {age}</h1>
+        <p>This is a simple React application. Props implemented.</p>
+      </div>
+    ) : (
+      <div>
+        <h1>Welcome {name} {age}</h1>
+        <p>This is a simple React application. Props implemented. here show is false</p>
+      </div>
+    )}
+  </>
+  );
 }
+
+ProbsExample.defaultProps = {
+  name: "Name not given",
+  age: 0,
+};

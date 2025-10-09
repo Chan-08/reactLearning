@@ -38,7 +38,7 @@ export default function TaskManager() {
 
   return (
     <div className="container my-5 col-lg-6 col-md-8 ">
-      <h2 className="mb-4 text-center">Task Manager</h2>
+      <h2 className="my-5 text-center">Task Manager</h2>
 
       {/* Input & Button */}
       <div className="input-group mb-3">

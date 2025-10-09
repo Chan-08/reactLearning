@@ -19,6 +19,9 @@ export default function Navbar() {
                       <li className="nav-item">
                           <NavLink to="/products" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}> Products </NavLink>
                       </li>
+                      <li className="nav-item">
+                          <NavLink to="/products-dynamic" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}> Products(Dynamic) </NavLink>
+                      </li>
 
                       <li className="nav-item">
                           <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}> About </NavLink>
