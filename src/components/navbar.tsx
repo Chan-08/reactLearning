@@ -1,6 +1,12 @@
 import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
+    
+    function logout() {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "/login";
+    }
+
   return (
       <nav className="navbar bg-dark navbar-dark navbar-expand-lg sticky-top">
           <div className="container-fluid">
@@ -33,6 +39,10 @@ export default function Navbar() {
 
                       <li className="nav-item">
                           <NavLink to="/learning" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}> Learning </NavLink>
+                      </li>
+
+                      <li className="nav-item">
+                          <button className='btn btn-outline-danger ' onClick={logout}> Logout </button>
                       </li>
                   </ul>
               </div>
