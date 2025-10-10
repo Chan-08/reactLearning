@@ -28,32 +28,34 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="container py-3 my-5 col-12 col-sm-6 col-md-4 col-lg-3 bg-light rounded shadow">
-      <h2 className="mb-4">Login Page</h2>
-      <form>
-        <div className="mb-3">
-          <label htmlFor="username" className="form-label">Username</label>
-          <input
-            type="text" className="form-control" id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">Password</label>
-          <input
-            type="password" className="form-control" id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="button" className="btn btn-outline-primary" onClick={handleLogin}> Login </button>
-      </form>
-      <hr />
-      <h5>Test Credentials:</h5>
-      <p>username: user1, password: pass1</p>
-      <p>username: user2, password: pass2</p>
-      <p>username: user3, password: pass3</p>      
+    <div className="bg-danger m-0 min-vh-100 d-flex justify-content-center align-items-center">
+      <div className="container p-3 m-5 col-12 col-sm-6 col-md-4 col-lg-3 rounded shadow border border-2 border-light text-center text-white">
+        <h2 className="mb-4">Login Page</h2>
+        <form>
+          <div className="mb-3">
+            <label htmlFor="username" className="form-label">Username</label>
+            <input
+              type="text" className="form-control" id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">Password</label>
+            <input
+              type="password" className="form-control" id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button type="button" className="btn btn-outline-warning" onClick={handleLogin}> Login </button>
+        </form>
+        <hr />
+        <h5>Test Credentials:</h5>
+        <p>username: user1, password: pass1</p>
+        <p>username: user2, password: pass2</p>
+        <p>username: user3, password: pass3</p>
+      </div>
     </div>
   );
 }
