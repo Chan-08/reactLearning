@@ -26,30 +26,45 @@ export default function Products2() {
   function isPurchased(id: number) {
     if (!purchasedProducts.includes(id)) {
       setPurchasedProducts([...purchasedProducts, id]);
-      console.log("Product with ID " + id + " purchased.");
+      //console.log("Product with ID " + id + " purchased.");
     }
   }
+
+  function deleteProduct(id: number) {
+    const updatedProducts = displayProducts.filter((product) => product.id !== id);
+    setDisplayProducts(updatedProducts);
+  }
+
+  function searchProduct(name: string) {
+    const updatedProducts = productsData.filter((product) =>
+      product.title.toLowerCase().includes(name.toLowerCase())
+    );
+    setDisplayProducts(updatedProducts);
+  }
+
 
   return (
     <div className="container-fluid">
       <h1 className="text-primary my-3">Products Page with dynamic product cards</h1>
 
       <div className="mb-4 d-flex gap-3">
-        <button className="btn btn-primary" onClick={showAll}>
-          Show All
-        </button>
+        <button className="btn btn-primary" onClick={showAll}> All </button>
 
-        <button className="btn btn-success" onClick={() => filterProducts(4)}>
-          Filtered (ID 4)
-        </button>
+        <button className="btn btn-warning" onClick={showReverse}> Reverse Order </button>
 
-        <button className="btn btn-success" onClick={() => filterProducts(6)}>
-          Filtered (ID 6)
-        </button>
+        <input 
+          type="number"
+          className="form-control w-auto"
+          placeholder="Filter by ID >"
+          onChange={(e) => filterProducts(e.target.valueAsNumber)} 
+        />
 
-        <button className="btn btn-warning" onClick={showReverse}>
-          Reverse Order
-        </button>
+        <input
+          type="text"
+          className="form-control w-auto"
+          placeholder="Search by name"
+          onChange={(e) => searchProduct(e.target.value)}
+        />
       </div>
 
       <div className="row g-4">
@@ -62,13 +77,14 @@ export default function Products2() {
                 <p className="card-text">{product.description}</p>
                 <p className="card-text">ID: {product.id}</p>
 
-                {!purchasedProducts.includes(product.id) ? (
-                  <button className="btn btn-primary" onClick={() => isPurchased(product.id)}>
-                    BUY
-                  </button>
-                ) : (
-                  <span className="text-success fw-bold">Purchased</span>
-                )}
+                <div className="d-flex gap-2">
+                  {!purchasedProducts.includes(product.id) ? (
+                    <button className="btn btn-outline-primary" onClick={() => isPurchased(product.id)}>BUY </button>
+                  ) : (
+                    <span className="text-success fw-bold">Purchased</span>
+                  )}
+                  <button className="btn btn-outline-danger" onClick={() => deleteProduct(product.id)}>Delete</button>
+                </div>
               </div>
             </div>
           </div>
