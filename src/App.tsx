@@ -14,6 +14,7 @@ import Products from './pages/products'
 import Products2 from './pages/products2';
 import LoginPage from './pages/login';
 import ApiIntegration from './pages/apitesting';
+import UseRef from './pages/useRef';
 
 
 export default function App() {
@@ -49,6 +50,7 @@ export default function App() {
                 <Route path="/learning" element={<Learning />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/api" element={<ApiIntegration />} />
+                <Route path="/useref" element={<UseRef />} />
               </Routes>
             </main>
           </div>

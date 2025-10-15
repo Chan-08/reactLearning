@@ -12,6 +12,9 @@ export default function SideBar() {
                     <li><Link className="text-white" to="/contact">Contact</Link></li>
                     <li><Link className="text-white" to="/products">Products</Link></li>
                     <li><Link className="text-white" to="/api">Api Integration</Link></li>
+                    <li><Link className="text-white" to="/useref">UseRef</Link></li>
+                    <li><Link className="text-white" to="/products-dynamic">Products-Dynamic</Link></li>
+                    <li><Link className="text-white" to="/learning">Learning</Link></li>
                 </ul>
             </nav>
         </aside>
