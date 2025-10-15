@@ -11,6 +11,7 @@ export default function SideBar() {
                     <li><Link className="text-white" to="/about">About</Link></li>
                     <li><Link className="text-white" to="/contact">Contact</Link></li>
                     <li><Link className="text-white" to="/products">Products</Link></li>
+                    <li><Link className="text-white" to="/api">Api Integration</Link></li>
                 </ul>
             </nav>
         </aside>

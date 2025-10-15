@@ -13,6 +13,7 @@ import Contact from './pages/contact'
 import Products from './pages/products'
 import Products2 from './pages/products2';
 import LoginPage from './pages/login';
+import ApiIntegration from './pages/apitesting';
 
 
 export default function App() {
@@ -47,6 +48,7 @@ export default function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/learning" element={<Learning />} />
                 <Route path="/login" element={<LoginPage />} />
+                <Route path="/api" element={<ApiIntegration />} />
               </Routes>
             </main>
           </div>
