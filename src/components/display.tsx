@@ -1,4 +1,4 @@
-import MyContext from "../pages/useContext";
+import MyContext from "../pages/hooks/useContext";
 import { useContext } from "react";
 
 export default function Display() {

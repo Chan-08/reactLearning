@@ -14,8 +14,9 @@ import Products from './pages/products'
 import Products2 from './pages/products2';
 import LoginPage from './pages/login';
 import ApiIntegration from './pages/apitesting';
-import UseRef from './pages/useRef';
-import UseReducer from './pages/useReducer';
+import UseRef from './pages/hooks/useRef';
+import UseReducer from './pages/hooks/useReducer';
+import UseMemo from './pages/hooks/useMemo';
 
 
 export default function App() {
@@ -53,6 +54,7 @@ export default function App() {
                 <Route path="/api" element={<ApiIntegration />} />
                 <Route path="/useref" element={<UseRef />} />
                 <Route path="/usereducer" element={<UseReducer />} />
+                <Route path="/usememo" element={<UseMemo />} />
               </Routes>
             </main>
           </div>
