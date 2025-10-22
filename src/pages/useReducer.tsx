@@ -27,10 +27,7 @@ export default function UseReducer() {
                 <button className="btn btn-secondary" onClick={() => dispatch({ type: "reset" })}>Reset</button>
             </div>
 
-            <div
-                className="container text-start bg-light p-4 rounded shadow-sm mt-4"
-                style={{ maxWidth: "700px" }}
-            >
+            <div className="container text-start p-4 mt-4 col-md-8 col-lg-6 mx-auto">
                 <h5 className="text-center mb-3 text-primary">Explanation</h5>
                 <p className="text-muted">
                     The <code>useReducer</code> hook is an alternative to <code>useState</code>
