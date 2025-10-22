@@ -1,14 +1,15 @@
+import MyContext from "../pages/useContext";
+import { useContext } from "react";
+
 export default function Display() {
-  // Get the string from localStorage
   const loggedInUserString = localStorage.getItem("loggedInUser");
 
-  // Parse it to an object
   const loggedInUser = loggedInUserString ? JSON.parse(loggedInUserString) : null;
 
-  // Access the username safely
   const username = loggedInUser ? loggedInUser.username : null;
   const id = loggedInUser ? loggedInUser.id : null;
 
+  const data = useContext(MyContext);
 
   return (
     <div className="container-fluid d-flex justify-content-center text-center">
@@ -30,6 +31,7 @@ export default function Display() {
           </span>{" "}
           to learn the <strong>React</strong> library. Here all the concepts are demonstrated with simple examples.
         </p>
+        <p>{data}</p>
         <a href="https://github.com/Chan-08/reactLearning" target="_blank" rel="noopener noreferrer">
             Repo Link
         </a>
