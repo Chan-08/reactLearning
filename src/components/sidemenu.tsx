@@ -15,6 +15,7 @@ export default function SideBar() {
                     <li><Link className="text-white" to="/useref">UseRef</Link></li>
                     <li><Link className="text-white" to="/products-dynamic">Products-Dynamic</Link></li>
                     <li><Link className="text-white" to="/learning">Learning</Link></li>
+                    <li><Link className="text-white" to="/usereducer">UseReducer</Link></li>
                 </ul>
             </nav>
         </aside>
