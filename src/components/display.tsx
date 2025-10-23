@@ -1,12 +1,7 @@
 import MyContext from "../pages/hooks/useContext";
 import { useContext } from "react";
 
-type DisplayProps = {
-  username?: string;
-  id?: number;
-};
-
-export default function Display({ username, id }: DisplayProps) {
+export default function Display() {
 
   const data = useContext(MyContext);
 
@@ -15,7 +10,6 @@ export default function Display({ username, id }: DisplayProps) {
       <div className="p-4 rounded shadow bg-white">
         <h1 className=" text-primary fw-bold">Welcome 👋</h1>
 
-        <h2 className="mb-3">The logged-in user is {username}, and their ID is {id}.</h2>
         <p className="fs-5 text-muted">
           This page is created by{" "}
           <span>

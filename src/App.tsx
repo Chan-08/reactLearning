@@ -19,6 +19,7 @@ import UseReducer from './pages/hooks/useReducer';
 import UseMemo from './pages/hooks/useMemo';
 import UseCallback from './pages/hooks/useCallback';
 import UserPage from './pages/user';
+import UserDetailPage from './pages/userDetails';
 
 
 export default function App() {
@@ -46,7 +47,7 @@ export default function App() {
                   path="/"
                   element={
                     <>
-                      <Display username = {username} id={id}/>
+                      <Display/>
                     </>
                   }
                 />
@@ -61,7 +62,9 @@ export default function App() {
                 <Route path="/usereducer" element={<UseReducer />} />
                 <Route path="/usememo" element={<UseMemo />} />
                 <Route path="/usecallback" element={<UseCallback />} />
-                <Route path="/user/:id" element={<UserPage username= {username} />} />
+                <Route path="/user/:id" element={<UserPage username= {username}  />} >
+                  <Route path="userDetails" element={ <UserDetailPage />} />
+                </Route>      
               </Routes>
             </main>
           </div>
