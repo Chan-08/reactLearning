@@ -17,6 +17,7 @@ export default function SideBar() {
                     <li><Link className="text-white" to="/learning">Learning</Link></li>
                     <li><Link className="text-white" to="/usereducer">UseReducer</Link></li>
                     <li><Link className="text-white" to="/usememo">UseMemo</Link></li>
+                    <li><Link className="text-white" to="/usecallback">UseCallback</Link></li>
                 </ul>
             </nav>
         </aside>

@@ -17,6 +17,7 @@ import ApiIntegration from './pages/apitesting';
 import UseRef from './pages/hooks/useRef';
 import UseReducer from './pages/hooks/useReducer';
 import UseMemo from './pages/hooks/useMemo';
+import UseCallback from './pages/hooks/useCallback';
 
 
 export default function App() {
@@ -55,6 +56,7 @@ export default function App() {
                 <Route path="/useref" element={<UseRef />} />
                 <Route path="/usereducer" element={<UseReducer />} />
                 <Route path="/usememo" element={<UseMemo />} />
+                <Route path="/usecallback" element={<UseCallback />} />
               </Routes>
             </main>
           </div>
