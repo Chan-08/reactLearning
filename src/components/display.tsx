@@ -1,13 +1,12 @@
 import MyContext from "../pages/hooks/useContext";
 import { useContext } from "react";
 
-export default function Display() {
-  const loggedInUserString = localStorage.getItem("loggedInUser");
+type DisplayProps = {
+  username?: string;
+  id?: number;
+};
 
-  const loggedInUser = loggedInUserString ? JSON.parse(loggedInUserString) : null;
-
-  const username = loggedInUser ? loggedInUser.username : null;
-  const id = loggedInUser ? loggedInUser.id : null;
+export default function Display({ username, id }: DisplayProps) {
 
   const data = useContext(MyContext);
 

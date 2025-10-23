@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import '../App.css';
 
-export default function SideBar() {
+type SideBarProps = {
+    id?: number;
+};
+
+export default function SideBar({ id }: SideBarProps) {
     return (
         <aside className="SideBar bg-danger">
             <h2 className="text-white">Side Bar</h2>
@@ -18,6 +22,7 @@ export default function SideBar() {
                     <li><Link className="text-white" to="/usereducer">UseReducer</Link></li>
                     <li><Link className="text-white" to="/usememo">UseMemo</Link></li>
                     <li><Link className="text-white" to="/usecallback">UseCallback</Link></li>
+                    <li><Link className="text-white" to={`/user/${id}`}>User Page</Link></li>
                 </ul>
             </nav>
         </aside>
